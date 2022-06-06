@@ -29,12 +29,14 @@ ul {
     list-style: none;
 }
 
+
 .container {
     max-width: 1440px;
     padding: 10rem 2rem;
     margin: 0 auto;
     overflow: hidden;
 }
+
 
 .h1 {
     font-weight: 800;
@@ -44,8 +46,8 @@ ul {
     color: #FEFEFE;
     text-transform: uppercase;
     text-align: center;
-    -webkit-animation: animation-2 1.5s ease-in-out;
-            animation: animation-2 1.5s ease-in-out;
+    -webkit-animation: animation-2 2s linear;
+            animation: animation-2 2s linear;
 }
 
 
@@ -53,16 +55,13 @@ ul {
     color: #C0204E;
 }
 
+
 .projects {
+    opacity: 0;
     padding-top: 6rem;
-    visibility: hidden;
-}
-
-
-.projects_animated {
-    -webkit-animation: animation 1.5s ease-in-out 0.00001s;
-            animation: animation 1.5s ease-in-out 0.00001s;
-    visibility: visible;
+    -webkit-animation: animation 2s linear 0.5s;
+            animation: animation 2s linear 0.5s;
+    animation-fill-mode: forwards;  
 }
 
 
@@ -101,12 +100,12 @@ ul {
     -o-object-position: 0 0;
        object-position: 0 0;
     transition: transform 1s ease-out,
-                -webkit-filter 1s ease-in-out;
+                -webkit-filter 1s linear;
     transition: transform 1s ease-out,
-                filter 1s ease-in-out;
+                filter 1s linear;
     transition: transform 1s ease-out,
-                filter 1s ease-in-out,
-                -webkit-filter 1s ease-in-out;
+                filter 1s linear,
+                -webkit-filter 1s linear;
 }
 
 
@@ -120,10 +119,12 @@ ul {
 @-webkit-keyframes animation {
     from {
         transform: translateX(10000px);
+        opacity: 1;
     }
 
     to {
-        transform: translateX(0px);
+        transform: translateX(0);
+        opacity: 1;
     }
 }
 
@@ -131,10 +132,12 @@ ul {
 @keyframes animation {
     from {
         transform: translateX(10000px);
+        opacity: 1;
     }
 
     to {
-        transform: translateX(0px);
+        transform: translateX(0);
+        opacity: 1;
     }
 }
 
@@ -145,7 +148,7 @@ ul {
     }
 
     to {
-        transform: translateX(0px);
+        transform: translateX(0);
     }
 }
 
@@ -156,7 +159,7 @@ ul {
     }
 
     to {
-        transform: translateX(0px);
+        transform: translateX(0);
     }
 }
 
@@ -177,11 +180,9 @@ ul {
         padding: 5rem 2rem;
     }
 
-
     .h1 {
         font-size: 3rem;
     }
-
     
     .projects {
         padding-top: 4rem;
@@ -198,11 +199,9 @@ ul {
         padding: 3rem 2rem;
     }
 
-
     .projects {
         padding-top: 3rem;
     }
-
 
     .projects__list {
         grid-template-columns: repeat(1, minmax(30rem, 0.7fr));
