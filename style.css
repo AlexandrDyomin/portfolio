@@ -55,9 +55,16 @@ ul {
 
 .projects {
     padding-top: 6rem;
-    -webkit-animation: animation 2s ease-in-out;
-            animation: animation 2s ease-in-out;
+    visibility: hidden;
 }
+
+
+.projects_animated {
+    -webkit-animation: animation 1.5s ease-in-out 0.00001s;
+            animation: animation 1.5s ease-in-out 0.00001s;
+    visibility: visible;
+}
+
 
 .projects__list {
     display: grid;
@@ -87,6 +94,7 @@ ul {
 
 .projects__img {
     width: 100%;
+    display: block;
     aspect-ratio: 16 / 9;
     -o-object-fit: cover;
        object-fit: cover;
