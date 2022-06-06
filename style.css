@@ -46,8 +46,8 @@ ul {
     color: #FEFEFE;
     text-transform: uppercase;
     text-align: center;
-    -webkit-animation: animation-2 2s linear;
-            animation: animation-2 2s linear;
+    -webkit-animation: animation-2 1s linear;
+            animation: animation-2 1s linear;
 }
 
 
@@ -59,8 +59,8 @@ ul {
 .projects {
     opacity: 0;
     padding-top: 6rem;
-    -webkit-animation: animation 2s linear 0.5s;
-            animation: animation 2s linear 0.5s;
+    -webkit-animation: animation 1s linear 0.5s;
+            animation: animation 1s linear 0.5s;
     animation-fill-mode: forwards;  
 }
 
@@ -118,7 +118,7 @@ ul {
 
 @-webkit-keyframes animation {
     from {
-        transform: translateX(10000px);
+        transform: translateX(200vw);
         opacity: 1;
     }
 
@@ -131,7 +131,7 @@ ul {
 
 @keyframes animation {
     from {
-        transform: translateX(10000px);
+        transform: translateX(200vw);
         opacity: 1;
     }
 
@@ -144,7 +144,7 @@ ul {
 
 @-webkit-keyframes animation-2 {
     from {
-        transform: translateX(-10000px);
+        transform: translateX(-200vw);
     }
 
     to {
@@ -155,7 +155,7 @@ ul {
 
 @keyframes animation-2 {
     from {
-        transform: translateX(-10000px);
+        transform: translateX(-200vw);
     }
 
     to {
