@@ -15,7 +15,6 @@ body {
     margin: 0;
     min-height: 100vh;
     background: url(bg.webp) center;
-    overflow: hidden;
 }
   
 
@@ -55,8 +54,9 @@ ul {
 
 .projects {
     padding-top: 6rem;
-    -webkit-animation: animation 1.5s ease-in-out 0.5s;
-            animation: animation 1.5s ease-in-out 0.5s;
+    overflow: hidden;
+    -webkit-animation: animation 2s ease-in-out;
+            animation: animation 2s ease-in-out;
 }
 
 .projects__list {
